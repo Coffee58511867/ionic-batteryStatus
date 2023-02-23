@@ -1,8 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Battery Status
-    </ion-title>
+
+      <ion-row>
+       <ion-title>
+        Battery Status
+      </ion-title>
+      <ion-icon name="battery-half-outline"></ion-icon>
+      <div style="margin-right: 5px;margin-left: 5px;">
+        {{photoStatus}}
+      </div>
+      </ion-row>
+
   </ion-toolbar>
 </ion-header>
 

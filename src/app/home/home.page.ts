@@ -18,6 +18,11 @@ export class HomePage implements OnInit{
       this.photoStatus = (res.isPlugged === true)?'Charging' : 'On Battery';
       this.batteryPercentage = res.level+ '%';
     })
+
+    const subscription = this.batteryStatus.onChange().subscribe(status => {
+      console.log(status.level, status.isPlugged);
+    })
+    subscription.unsubscribe();
   }
 
 }
